@@ -48,11 +48,11 @@ app.post("/contact",async (req,res) => {
         })
 
         const result = await Userdata.save();
-        // res.status(201).render("index");
         console.log(result);
+        res.status(201).render("index");
 
     } catch (err) {
-        res.status(400).send(err).json();
+        res.status(400).send(err);
         console.log(err);
     }
 })
