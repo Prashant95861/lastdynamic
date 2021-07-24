@@ -6,7 +6,7 @@ const requests = require("requests");
 const mongoose = require("mongoose");
 
 // require("./db/conn");
-// TX7lGsLNGiIfUnGj
+//MONGODB ATLAS PASSWORD TX7lGsLNGiIfUnGj
 const User = require("./model/lastd");
 
 const DB = 'mongodb+srv://Prashant9586:TX7lGsLNGiIfUnGj@newcluster.bdg8h.mongodb.net/lastdynamicwebsite?retryWrites=true&w=majority';
