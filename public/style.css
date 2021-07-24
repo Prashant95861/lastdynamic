@@ -81,7 +81,7 @@ body{
 .spe{
     padding: 1.7rem 1.4rem;
     background-image: linear-gradient(-45deg,rgb(206, 118, 118) 0%,rgb(240, 68, 68) 50%);
-    border-radius: 88% 59% 63% 68% / 100% 83% 42% 37%  ;
+    border-radius: 78% 59% 63% 67% / 100% 83% 42% 37% ;
 }
 .spe i{
     font-size: 2rem;

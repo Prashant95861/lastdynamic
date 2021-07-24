@@ -7,7 +7,7 @@ const mongoose = require("mongoose");
 
 // require("./db/conn");
 // TX7lGsLNGiIfUnGj
-const User = require("./model/lastd.js");
+const User = require("./model/lastd");
 
 const DB = 'mongodb+srv://Prashant9586:TX7lGsLNGiIfUnGj@newcluster.bdg8h.mongodb.net/lastdynamicwebsite?retryWrites=true&w=majority';
 
@@ -17,11 +17,10 @@ mongoose.connect(DB,{
     useUnifiedTopology: true,
     useFindAndModify:false,  
 }).then(() => {
-   console.log("connection successful");
+   console.log("connection successful for mongodb atlas");
 }).catch((err) => {
    console.log(err);
 })
-
 
 const staticPath = path.join(__dirname,"../public");
 app.use(express.static(staticPath));
@@ -48,11 +47,11 @@ app.post("/contact",async (req,res) => {
         })
 
         const result = await Userdata.save();
+        // res.status(201).render("index");
         console.log(result);
-        res.status(201).render("index");
 
     } catch (err) {
-        res.status(400).send(err);
+        res.status(400).send(err).json();
         console.log(err);
     }
 })
