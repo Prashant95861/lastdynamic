@@ -47,7 +47,7 @@ app.post("/contact",async (req,res) => {
         })
 
         const result = await Userdata.save();
-        // res.status(201).render("index");
+        res.status(201).render("index");
         console.log(result);
 
     } catch (err) {
